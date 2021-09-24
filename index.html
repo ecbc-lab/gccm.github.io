@@ -52,9 +52,9 @@
             <a href="https://www.nghs.com/heart/">Georgia Heart Institute</a>
              in Gainesville, GA the center focuses on 3 areas of cardiovascular 
              research: 
-            <a href="/Research">Machine learning</a>, 
-            <a href="/Research">Device Biomechanics</a> and 
-            <a href="/Research">Biomechanics of Atherosclerosis</a>
+            <a href="research">Machine learning</a>, 
+            <a href="research">Device Biomechanics</a> and 
+            <a href="research">Biomechanics of Atherosclerosis</a>
         </p>
     </div>
     <div class="box">
@@ -83,7 +83,7 @@
                 <br>Valvular disease devices
             </p>
         </div>
-        <img src="../img/Stent_vs_nostent.jpeg" class="popup">
+        <img src="img/Stent_vs_nostent.jpeg" class="popup">
     </div>
     <div class="footer">
 
@@ -123,15 +123,15 @@
             console.log(e.currentTarget);
         };
         if (e.currentTarget.className.includes('circle-2')) {
-            image.src = "gccm.github.io/img/WSS-IVUS.gif";
+            image.src = "img/WSS-IVUS.gif";
             this.style.gridArea = "1 / 1 / span 4 / span 4"
         }
         else if (e.currentTarget.className.includes('circle-3')) {
-            image.src = "gccm.github.io/img/DeepIVUS_auto.gif";
+            image.src = "DeepIVUS_auto.gif";
             this.style.gridArea = "1 / 5 / span 4 / span 4"
         }
         else if (e.currentTarget.className.includes('circle-4')) {
-            image.src = "gccm.github.io/img/stent_walkthru.gif";
+            image.src = "img/stent_walkthru.gif";
             this.style.gridArea = "5 / 2 / span 4 / span 4"
         }
         //image.style.display="inline" 
@@ -139,15 +139,15 @@
 
     function leaveCircle(e) {
         if (e.currentTarget.className.includes('circle-2')) {
-            image.src = "../img/Stent_vs_nostent.jpeg";
+            image.src = "img/Stent_vs_nostent.jpeg";
             this.style.gridArea = area2;
         }
         else if (e.currentTarget.className.includes('circle-3')) {
-            image.src = "../img/Stent_vs_nostent.jpeg";
+            image.src = "img/Stent_vs_nostent.jpeg";
             this.style.gridArea = area3;
         }
         else if (e.currentTarget.className.includes('circle-4')) {
-            image.src = "../img/Stent_vs_nostent.jpeg";
+            image.src = "img/Stent_vs_nostent.jpeg";
             this.style.gridArea = area4;
         }
     }
