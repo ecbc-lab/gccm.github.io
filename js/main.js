@@ -29,15 +29,15 @@ function enterCircle(e) {
         console.log(e.currentTarget);
     };
     if (e.currentTarget.className.includes('circle-2')) {
-        image.src = "../img/WSS-IVUS.gif";
+        image.src = "img/WSS-IVUS.gif";
         this.style.gridArea = "6 / 1 / span 4 / span 4"
     }
     else if (e.currentTarget.className.includes('circle-3')) {
-        image.src = "../img/DeepIVUS_auto.gif";
+        image.src = "img/DeepIVUS_auto.gif";
         this.style.gridArea = "6 / 5 / span 4 / span 4"
     }
     else if (e.currentTarget.className.includes('circle-4')) {
-        image.src = "../img/stent_walkthru.gif";
+        image.src = "img/stent_walkthru.gif";
         this.style.gridArea = "10 / 2 / span 4 / span 4"
     }
     //image.style.display="inline" 
@@ -45,15 +45,15 @@ function enterCircle(e) {
 
 function leaveCircle(e) {
     if (e.currentTarget.className.includes('circle-2')) {
-        image.src = "../img/Stent_vs_nostent.jpeg";
+        image.src = "img/Stent_vs_nostent.jpeg";
         this.style.gridArea = area2;
     }
     else if (e.currentTarget.className.includes('circle-3')) {
-        image.src = "../img/Stent_vs_nostent.jpeg";
+        image.src = "img/Stent_vs_nostent.jpeg";
         this.style.gridArea = area3;
     }
     else if (e.currentTarget.className.includes('circle-4')) {
-        image.src = "../img/Stent_vs_nostent.jpeg";
+        image.src = "img/Stent_vs_nostent.jpeg";
         this.style.gridArea = area4;
     }
 }
