@@ -1,0 +1,251 @@
+.container {
+    font-family: 'Tahoma', 'Libre Franklin', sans-serif;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 100px auto auto;
+}
+
+.logo {
+    grid-column: 2 / span 1;
+    width: 100%;
+}
+
+.header {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-gap: 5px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.header-nav {
+    text-align: center;
+    font-family: 'Tahoma', 'Libre Franklin', sans-serif;
+    font-weight: 100;
+    color: white;
+    background: linear-gradient(skyblue, darkblue);
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.header-nav:active {
+    background: red;
+}
+
+.header-link {
+    color: white;
+}
+
+.header-link:hover {
+    color: blue;
+  }
+
+.focus {
+    margin-top: 20px;
+    border: 4px;
+    outline: auto;
+    padding: 10px;
+}
+
+.content {
+    grid-row: 3 / span 3;
+    grid-column: 2 / -2;
+}
+
+/* home page */
+
+.box {
+    font-family: Tahoma;
+    display: grid;
+    grid-column: 2 / -1;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    aspect-ratio: 1/1;
+}
+.circle {
+    justify-content: center;
+    outline-color:black;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid black;
+}
+
+.circle-body {
+    padding-top: 0px;
+}
+.circle-1 {
+    grid-area: 3 / 3 / span 4 / span 4;
+    background: red;
+    text-align:center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+}
+.circle-2 {
+    grid-area: 1 / 1 / span 3 / span 3;
+    background: blue;
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
+    padding-top: 15%;
+    align-content: center;
+}
+
+.circle-3 {
+    grid-area: 1 / 6 / span 3 / span 3;
+    background: green;
+    justify-content: center;
+    text-align: center;
+    padding-top: 15%;
+}
+.circle-4 {
+    grid-area: 6 / 3 / span 3 / span 3;
+    background: skyblue;
+    justify-content: center;
+    text-align: center;
+    padding-top: 15%;
+    transform: translateX(15%) translateY(25%);
+}
+
+.title {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.popup {
+    grid-area: 3 / 10 / span 6 / span 6;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    border: 1px solid black;
+}
+
+/* research page */
+
+.infobox {
+    border: 1px solid black;
+    border-radius: 10%;
+    display: grid;
+    padding: 5%;
+    grid-gap: 25px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-top: 50px;
+}
+
+.infobox .image {
+    grid-area: 1 / 1 / span 3 / span 4;
+}
+
+.research-image {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;  
+}
+
+.research-text {
+    grid-area: 1 / 5 / span 3 / span 2;
+    text-align: justify;
+}
+
+/* Person page */
+.person {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr auto;
+}
+
+.person-text {
+    grid-area: 1 / 3 / span 3 / span 3;
+}
+
+.person img {
+    grid-area: 1 / 1 / span 3 / span 3;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;  
+}
+
+.former p {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 0.85rem;
+}
+
+/* News page */
+.date {
+    color: #808080;
+}
+
+.headline {
+    color:darkred;
+    font-size: 2rem;
+    font-family: "Open Sans";
+}
+
+.story {
+    color: black;
+    font-family: "Tahoma";
+
+}
+
+/* contact page */
+.content-contact {
+    grid-area: 3 / 2 / span 5 / span 5;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#message {
+    width: 50%;
+    grid-row: span 4;
+}
+
+#submit {
+    background-color: black;
+    font-family: "Helvetica Neue";
+    color: white;
+    width: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* publications page */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .modal-image {
+    margin-left: 10%;
+    border: 1px solid #888;
+    margin-right: 10%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }

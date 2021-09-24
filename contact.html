@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Starter Files and Tooling Setup!</title>
+
+  <script>
+      function initMap() {
+        // The location of Gainesville
+        const gainesville = { lat: 34.30391208029492, lng: -83.81576713767662 };
+        // The map, centered at Gainesville
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: gainesville,
+        });
+        // The marker, positioned at Gainesville
+        const marker = new google.maps.Marker({
+          position: gainesville,
+          map: map,
+        });
+      }
+  </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <a href="/index">
+                <img src="../img/logo.png" alt="GCCM">
+            </a>
+        </div>
+        <div  class="header">
+        <nav>
+            <ul>
+                <li class="header-nav">
+                    <a class="header-link" href="/news">News</a>
+                </li>
+                <li class="header-nav">
+                    <a class="header-link" href="/research">Research</a>
+                </li>
+                <li class="header-nav">
+                    <a class="header-link" href="/people">People</a>
+                </li>
+                <li class="header-nav">
+                    <a class="header-link" href="/publications">Publications</a>
+                </li> 
+                <li class="header-nav">
+                    <a class="header-link" href="/CRIP">CRIP</a>
+                </li>   
+                <li class="header-nav">
+                    <a class="header-link" href="/Contact">Contact</a>
+                </li>
+            </ul>                                       
+        </nav>
+    </div>
+    <div class="content-contact">
+        <h2>Contact</h2>
+        <div>For research inquiries please submit details through 
+            the below from. For inquiries regarding the 
+            cardiology research internship program (CRIP) see 
+            <a href="crip">here.</a>
+            <br><br>
+            <form method="post" action="contact.php">
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email"><br><br>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="content">Message:</label><br>
+                <textarea type="text" id="message" rows=10 name="message" value="Type your message here"></textarea><br><br>
+                <input id="submit" type="submit" value="Submit">
+              </form>
+        </div>
+        <div>
+            <h2>Location</h2>
+            <p>The Georgia Center for Cardiovascular Modeling is based in 
+                Gainesville, GA about 45 minutes outside Atlanta. 
+            </p>
+            <div id="map">
+                <iframe width="80%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-83.88078689575197%2C34.263600862439354%2C-83.74929428100587%2C34.34442821317472&amp;layer=mapnik&amp;marker=34.304024261960826%2C-83.8150405883789" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=34.3040&amp;mlon=-83.8150#map=13/34.3040/-83.8150">View Larger Map</a></small>
+            </div>
+        </div>
+    </div>
+    <script>
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+        async
+    </script>
+    </body>
+<html>
